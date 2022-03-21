@@ -1,7 +1,6 @@
 '''
 参考自：https://tianchi.aliyun.com/notebook-ai/detail?spm=5176.12586969.1002.15.410521d8yGZf7j&postId=144449
 '''
-
 import time, math, os
 from tqdm import tqdm
 import gc
@@ -31,7 +30,7 @@ def get_user_item_time(click_df):
     return user_item_time_dict
     
     
- # 获取点击最多的top k个文章
+ # 获取点击最多的top k个文章，用于补全
  def get_item_topk_click(click_df, k):
     topk_click = click_df['click_article_id'].value_counts().index[:k]
     return topk_click
